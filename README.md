@@ -1,4 +1,5 @@
 # First setup
+- cd && rm -rf wdp
 - curl https://raw.githubusercontent.com/FLeafs/wdp/main/setup.sh -o setup.sh
 - chmod +x ./setup.sh
 - ./setup.sh
