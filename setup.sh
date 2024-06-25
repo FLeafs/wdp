@@ -8,6 +8,8 @@ echo "Cloning repository"
 git clone https://github.com/FLeafs/wdp.git
 
 echo "NPM install"
+cd && cd wdp
 npm i
 
 echo "Done... skrg run : cd && cd wdp && node main.js"
+cd
