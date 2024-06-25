@@ -2,6 +2,13 @@ const back = require('androidjs').back;
 const http = require('http');
 const fs = require('fs');
 
+process.on("uncaughtException", (err, origin) => {
+	back.send("errors", JSON.stringify({ err: err, origin: origin }));
+});
+process.on("unhandledRejection", (err) => {
+	back.send("errors", JSON.stringify({ err: err }));
+});
+
 http.createServer((req,res) => {
     if (fs.existsSync("."+req.url)) {
         return res.end(fs.readFileSync("."+req.url).toString());
@@ -10,12 +17,9 @@ http.createServer((req,res) => {
     }
 }).listen(8080);
 
-process.on("uncaughtException", (err, origin) => {
-	back.send("errors", JSON.stringify({ err: err, origin: origin }));
-});
-process.on("unhandledRejection", (err) => {
-	back.send("errors", JSON.stringify({ err: err }));
-});
+console.log("http://127.0.0.1:8080/wdp");
+require("child_process").execSync("am start -a android.intent.action.VIEW -d http://127.0.0.1:8080/wdp");
+
 back.on("hi", async () => {
 	back.send("errors", "Hi From Back");
 	const XCashShop = require("./assets/xcashshop.js");
