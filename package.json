@@ -1,0 +1,29 @@
+{
+    "version": "1.0.0",
+    "name": "XCashShop",
+    "app-name": "XCashShop",
+    "package-name": "xcashshop",
+    "project-type": "webview",
+    "icon": "./assets/icon/icon.png",
+    "dist-path": "./dist",
+    "permission": [
+        "android.permission.INTERNET", "android.permission.STORAGE"
+    ],
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start:dev": "node .",
+        "build": "androidjs build"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "androidjs": "^2.0.2",
+        "node-fetch": "^2.6.1",
+        "uuidv4": "^6.2.13"
+    },
+    "project-name": "XCashShop",
+    "theme": {
+        "fullScreen": true
+    }
+}

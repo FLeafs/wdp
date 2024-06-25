@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Webview Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript" src="./node_modules/androidjs/lib/androidjs.js"></script>
+</head>
+
+<body>
+  <div class="container my-4" id="bodys">
+    <div class="d-flex justify-content-between mb-4">
+      <button class="btn btn-primary" onclick="addOrder()">Add Order</button>
+      <h3>FrostyIce was here</h3>
+      <button class="btn btn-secondary" onclick="addAccount()">Add Account</button>
+    </div>
+
+    <hr>
+
+    <h3>Order List</h3>
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4 class="card-title">Orders</h4>
+        <div class="card-actions">
+          <button class="btn btn-outline-primary" onclick="addOrder()">Add Order</button>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Minimal Price</th>
+              <th>Total Buy</th>
+              <th>Success</th>
+            </tr>
+          </thead>
+          <tbody id="order">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr>
+
+    <h3>Account List</h3>
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Accounts</h4>
+        <div class="card-actions">
+          <button class="btn btn-outline-primary" onclick="addAccount()">Add Account</button>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>User ID</th>
+              <th>Zone ID</th>
+              <th>Phone Number</th>
+            </tr>
+          </thead>
+          <tbody id="account">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- <h3>Logs</h3>
+    <label class="form-check form-switch">
+      <input class="form-check-input" id="enableLogs" type="checkbox">
+      <span class="form-check-label">Enable</span>
+    </label>
+    <textarea class="form-control card" id="logs" name="example-textarea" placeholder="Textarea placeholder" style="height: 300px;"></textarea>
+  </div>
+
+  <hr> -->
+  <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>
